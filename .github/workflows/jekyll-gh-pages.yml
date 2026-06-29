@@ -30,13 +30,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: true          # 关键：拉取子模块
+          submodules: false          # 关键：拉取子模块
           fetch-depth: 0
-      - name: Install Theme
+      - name: Clone Next Theme
         run: |
-            if [ ! -d "themes/next" ]; then
-              git clone https://github.com/next-theme/hexo-theme-next.git themes/next
-            fi
+             if [ ! -d "themes/next" ]; then
+             git clone https://github.com/next-theme/hexo-theme-next.git themes/next
+             fi
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
