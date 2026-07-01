@@ -1,5 +1,6 @@
 ---
 title: MarkDown基本语法
+tag: Hexo
 ---
 Markdown是一种观念标记语言。 [MarkDown](https://markdown.com.cn/basic-syntax/index.html)! 我将用本文记录一下MarkDown的常用代码和功能. 
 ## 标题语法

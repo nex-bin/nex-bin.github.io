@@ -2,7 +2,7 @@
 
 title: hexo 资源文件夹
 date: 2026-05-28 15:28:06
-tags:  资源文件夹的使用
+tags:  Hexo
 ---
 
 ## 前提

@@ -1,7 +1,7 @@
 ---
 title: Tag Plugins
 date: 2026-05-28 09:36:21
-tags: 标签插件是从Octopress移植的，旨在提供一种快速向帖子添加特定内容的有效方法。
+tags: Hexo
 ---
 ## 引用块
 
