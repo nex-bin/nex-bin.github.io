@@ -77,6 +77,9 @@
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -98,6 +101,10 @@
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/2026/05/28/home/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+  </ul>
+</nav>
 
 
 
@@ -132,7 +139,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -154,6 +161,106 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/06/30/CRC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nex">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nex的博客">
+      <meta itemprop="description" content="description">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Nex的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/06/30/CRC/" class="post-title-link" itemprop="url">Modbus RTU CRC 校验</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-06-30 15:02:53" itemprop="dateCreated datePublished" datetime="2026-06-30T15:02:53+08:00">2026-06-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-07-01 20:11:52" itemprop="dateModified" datetime="2026-07-01T20:11:52+08:00">2026-07-01</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="About-Modbus-RTU"><a href="#About-Modbus-RTU" class="headerlink" title="About Modbus RTU"></a>About Modbus RTU</h2><p>Modbus协议被广泛应用于工业自动化系统中，核心优势在于结构简单，易于实现，且兼容性强，适用于多种物理层（如RS-485，TCP&#x2F;IP等）。在实际应用中，Modbus主要有两种传输模式：ASCll和RTU。其中，Modbus RTU因其紧凑高效的数据格式和较强的抗干扰能力，在工业现场得到了更广泛的应用。<br>为了确保数据在传输过程中不被破坏，Modbus RTU采用CRC（Cyclic Redundancy Check，循环冗余校验）机制进行数据完整性校验。CRC-16算法作为其校验标准，能够在接收端检测出绝大多数传输错误，从而保障通信的可靠性。</p>
+<h2 id="Modbus-RTU-CRC校验机制"><a href="#Modbus-RTU-CRC校验机制" class="headerlink" title="Modbus RTU CRC校验机制"></a>Modbus RTU CRC校验机制</h2><h3 id="Modbus-RTU-帧结构组成"><a href="#Modbus-RTU-帧结构组成" class="headerlink" title="Modbus RTU 帧结构组成"></a>Modbus RTU 帧结构组成</h3><p>Modbus RTU帧结构由多个字段组成，包括地址域、功能码、数据域和CRC校验码。<br><img src="https://image.modbus.cn/wp-content/uploads/2024/05/20240508211317493.png"></p>
+<h4 id="地址域与功能码解析"><a href="#地址域与功能码解析" class="headerlink" title="地址域与功能码解析"></a>地址域与功能码解析</h4><p>Modbus RTU帧的的第一个字节是地址域（Address Field），用于标识目标从站设备的地址。地址范围是0x00到0xFF(即0~255)。其中：</p>
+<ul>
+<li>0x00为广播地址，表示该请求将被所有从站接收并处理（通常不回复响应）;</li>
+<li>0x01至0xF7为有效从站地址范围；</li>
+<li>0xF8至0xFF保留或未使用。<br>紧接着地址域的是功能码(Function Code)，用于指示主站请求从站执行的具体操作。</li>
+</ul>
+<img src="/2026/06/30/CRC/modbus01.png" class="" title="[Modbus 功能码]">
+<p><strong>帧结构示例：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0x01 0x03 0x00 0x00 0x00 0x02 [CRC1] [CRC2]</span><br></pre></td></tr></table></figure>
+<p><strong>响应帧示例</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0x01 0x03 0x04 0x00 0x0A 0x01 0x0B [CRC1] [CRC2]</span><br></pre></td></tr></table></figure>
+
+<h4 id="数据域的格式与长度规范"><a href="#数据域的格式与长度规范" class="headerlink" title="数据域的格式与长度规范"></a>数据域的格式与长度规范</h4><p>数据域在Modbus RTU帧中紧跟在功能码之后，其内容和长度根据功能码的不同而变化。例如，在功能码0x03的响应帧中，数据域的第一个字节为返回数据的字节数，后续字节为实际数据。</p>
+<p>####CRCC校验码的插入与作用<br>CRC校验码是Modbus RTU帧的最后一个字段，占据两个字节。用于校验整个帧中除CRC字段外的全部数据是否在传输过程中发生错误。CRC计算基于帧中从地址域到数据域的所有字节，通过CRC-16算法  生成一个16位的校验值，并附在帧末尾。<br><strong>CRC字段示意图</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[地址域] [功能码] [数据域] ... [CRC高字节] [CRC低字节]   &lt;---- 大端</span><br></pre></td></tr></table></figure>
+
+<h2 id="CRC校验码"><a href="#CRC校验码" class="headerlink" title="CRC校验码"></a>CRC校验码</h2><p>CRC校验是Modbus RTU协议中保障通信可靠性的核心技术。其工作机制分为发送端的CRC计算和附加，以及接收端的校验流程，任何一方出错都会导致通信失败。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">V(x)=A(x)g(x)=xRm(x)+r(x);</span><br></pre></td></tr></table></figure>
+<p><code>类似于一次线性函数，y = ax + b；每一个y都有唯一的x与之对应。而CRC校验中就是根据余数b来进行判断数据传输是否有出错的。其中a为生成多项式g(x)。   计算CRC校验的过程就变成了计算余数的过程。</code></p>
+<h3 id="生成多项式"><a href="#生成多项式" class="headerlink" title="生成多项式"></a>生成多项式</h3><p>在CRC校验中存在多种变式。不同的变式对应不同的g(x)。在Modbus中使用的g(x)是：x^16 + x^15 + x^2 + 1。<br><code>x^16 + x^15 + x^2 + 1可以理解为是x^16 + x^15 + 0^14 + 0^13 + 。。。。 + x^2 + 0^1 + 1。其中，0的任何此幂都为0.</code><br>x^16 + x^15 + x^2 + 1 对应代码为： 0x 1100 0000 0000 0010 + 1 &#x3D;&#x3D;&#x3D;&#x3D;&gt; 在实际使用中会截去最高位 &#x3D;&#x3D;&#x3D;&#x3D;&gt; 0x 1000 0000 0000 0101 &#x3D; 0x8005  —-&gt; g(x)</p>
+<h3 id="模二除法"><a href="#模二除法" class="headerlink" title="模二除法"></a>模二除法</h3><p>模二除法是二进制运算中基于异或逻辑的除法方法，其特点为运算过程不借位、不比较数值大小。仅仅通过相同位数相除完成计算。</p>
+<img src="/2026/06/30/CRC/modbus02.png" class="" title="&#x2F;[Modbus]">
+<p>图片左侧为正常运算过程，右侧为镜像运算过程。发现，镜像完全不影响运算过程。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -561,9 +668,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2026-06-11 15:51:29 / Modified: 16:15:25" itemprop="dateCreated datePublished" datetime="2026-06-11T15:51:29+08:00">2026-06-11</time>
+      <time title="Created: 2026-06-11 15:51:29" itemprop="dateCreated datePublished" datetime="2026-06-11T15:51:29+08:00">2026-06-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-07-01 20:16:31" itemprop="dateModified" datetime="2026-07-01T20:16:31+08:00">2026-07-01</time>
     </span>
 
   
@@ -577,7 +690,7 @@
     
     <div class="post-body" itemprop="articleBody">
           <h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> [layout] &lt;title&gt;  用于创建一个新的名为title的文章</span><br></pre></td></tr></table></figure>
-<p>hexo 有三种默认布局：<strong>post</strong> 、<strong>page</strong> 和 <strong>draft</strong>。新建一篇文章，如果没有设置<strong>layout</strong>的话，默认使用 <code>_config.yaml</code> 中的 <strong>default_layout</strong> 参数代替。使用布局 <strong>draft</strong> 来创建草稿。</p>
+<p>hexo 有三种默认布局：<strong>post</strong> 、<strong>page</strong> 和 <strong>draft</strong>。新建一篇文章，如果没有设置<strong>layout</strong>的话，默认使用 <code>_config.yaml</code> 中的 <strong>default_layout</strong> 参数代替。使用布局 <strong>draft</strong> 来创建草稿。<br><img src="https://io-oi.me/tech/hexo-next-optimization/" alt="Hexo+Next+Github"></p>
 
       
     </div>
@@ -718,7 +831,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-06-01 10:29:19" itemprop="dateModified" datetime="2026-06-01T10:29:19+08:00">2026-06-01</time>
+      <time title="Modified: 2026-07-01 20:15:45" itemprop="dateModified" datetime="2026-07-01T20:15:45+08:00">2026-07-01</time>
     </span>
 
   
@@ -857,7 +970,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/05/28/first/">
+    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/05/28/home/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -875,7 +988,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/05/28/first/" class="post-title-link" itemprop="url">first</a>
+          <a href="/2026/05/28/home/" class="post-title-link" itemprop="url">home</a>
         </h2>
 
         <div class="post-meta-container">
@@ -893,7 +1006,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-06-29 15:19:05" itemprop="dateModified" datetime="2026-06-29T15:19:05+08:00">2026-06-29</time>
+      <time title="Modified: 2026-06-30 13:35:00" itemprop="dateModified" datetime="2026-06-30T13:35:00+08:00">2026-06-30</time>
     </span>
 
   
@@ -968,7 +1081,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-06-01 13:21:26" itemprop="dateModified" datetime="2026-06-01T13:21:26+08:00">2026-06-01</time>
+      <time title="Modified: 2026-07-01 20:15:14" itemprop="dateModified" datetime="2026-07-01T20:15:14+08:00">2026-07-01</time>
     </span>
 
   
