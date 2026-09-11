@@ -139,7 +139,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -161,6 +161,74 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/09/11/QT-01-about/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nex">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nex的博客">
+      <meta itemprop="description" content="description">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Nex的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/09/11/QT-01-about/" class="post-title-link" itemprop="url">QT_01_about</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-09-11 17:36:02" itemprop="dateCreated datePublished" datetime="2026-09-11T17:36:02+08:00">2026-09-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -727,7 +795,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-09-11 17:23:11" itemprop="dateModified" datetime="2026-09-11T17:23:11+08:00">2026-09-11</time>
+      <time title="Modified: 2026-09-11 17:42:08" itemprop="dateModified" datetime="2026-09-11T17:42:08+08:00">2026-09-11</time>
     </span>
 
   
@@ -742,8 +810,9 @@
     <div class="post-body" itemprop="articleBody">
           <h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> [layout] &lt;title&gt;  用于创建一个新的名为title的文章</span><br></pre></td></tr></table></figure>
 <p>hexo 有三种默认布局：<strong>post</strong> 、<strong>page</strong> 和 <strong>draft</strong>。新建一篇文章，如果没有设置<strong>layout</strong>的话，默认使用 <code>_config.yaml</code> 中的 <strong>default_layout</strong> 参数代替。使用布局 <strong>draft</strong> 来创建草稿。<br>示例：</p>
-<img class="main01.png">
+<img src="/main01.png" class="">
 
+<h3 id="静态论坛"><a href="#静态论坛" class="headerlink" title="静态论坛"></a>静态论坛</h3><p>配合Github项目，Aciton的自解析。将Hexo生成的资源文件夹(&#x2F;public)上传到github。</p>
 <p><a target="_blank" rel="noopener" href="https://io-oi.me/tech/hexo-next-optimization/">Hexo+Next+Github</a></p>
 
       
@@ -885,7 +954,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-09-11 17:19:30" itemprop="dateModified" datetime="2026-09-11T17:19:30+08:00">2026-09-11</time>
+      <time title="Modified: 2026-09-11 17:37:30" itemprop="dateModified" datetime="2026-09-11T17:37:30+08:00">2026-09-11</time>
     </span>
 
   
@@ -901,6 +970,7 @@
           <h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><figure class="highlight json"><figcaption><span>config.yaml</span><a target="_blank" rel="noopener" href="https://hexo.nodejs.cn/docs/asset-folders.html">hexo官网链接</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br></pre></td></tr></table></figure>
 
 <p>启用之后，每次使用<code>hexo new [layout] &lt;title&gt;</code> 会创建一个与markdown文件同名的文件夹。将与你的帖子相关的所有资源放入关联文件夹中，你可以使用相对路径引用他们。从而使工作流程更轻松。</p>
+<img src="/qt01.png" class="">
 <h2 id="用于相对路径引用的标签插件"><a href="#用于相对路径引用的标签插件" class="headerlink" title="用于相对路径引用的标签插件"></a>用于相对路径引用的标签插件</h2><p>使用普通markdown语法或其他资源可能会导致存档或者索引页面上的内容显示不正确。<code>hexo 3</code>中添加了新的标签插件。可以更轻松的在帖子中引用你的资源。</p>
 <h3 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; % asset_path slug %&#125;</span><br><span class="line">&#123; % asset_img slug [title] %&#125;</span><br><span class="line">&#123; % asset_link slug [title] % &#125;</span><br></pre></td></tr></table></figure>
 <p>例如，在启用帖子资源文件夹的情况下，如果你将图片，<code>example.jpg</code>放入资源文件夹，如果使用常规应用<code>![](example.jpg)</code>markdown的语法的相对路径引用它，他将不会出现在索引页面上。</p>
@@ -1197,115 +1267,9 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/05/28/MarkDown/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nex">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nex的博客">
-      <meta itemprop="description" content="description">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Nex的博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/05/28/MarkDown/" class="post-title-link" itemprop="url">MarkDown基本语法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2026-05-28 09:28:17" itemprop="dateCreated datePublished" datetime="2026-05-28T09:28:17+08:00">2026-05-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-07-01 20:15:14" itemprop="dateModified" datetime="2026-07-01T20:15:14+08:00">2026-07-01</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Markdown是一种观念标记语言。 <a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/index.html">MarkDown</a>! 我将用本文记录一下MarkDown的常用代码和功能. </p>
-<h2 id="标题语法"><a href="#标题语法" class="headerlink" title="标题语法"></a>标题语法</h2><h3 id="举例。"><a href="#举例。" class="headerlink" title="举例。"></a>举例。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### 举例。</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="举例。-1"><a href="#举例。-1" class="headerlink" title="举例。"></a>举例。</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#### 举例。</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/headings.html">标题语法</a></p>
-<h2 id="强调语法"><a href="#强调语法" class="headerlink" title="强调语法"></a>强调语法</h2><p>** 强调 **</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**强调**</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/emphasis.html">强调语法</a></p>
-<h2 id="块引用"><a href="#块引用" class="headerlink" title="块引用"></a>块引用</h2><blockquote>
-<p>这是一个块，用于体现<em>块引用</em>的效果。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 这是一个块，用于体现*块引用*的效果。</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/blockquotes.html">引用块语法</a></p>
-<h2 id="代码语法"><a href="#代码语法" class="headerlink" title="代码语法"></a>代码语法</h2><p><code>代码语法演示</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`代码语法演示`</span><br></pre></td></tr></table></figure>
-<h3 id="代码语法-1"><a href="#代码语法-1" class="headerlink" title="代码语法"></a>代码语法</h3><pre><code>代码块语法演示
-</code></pre>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码块语法演示`</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/code.html">代码语法</a></p>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><hr>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">___</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/horizontal-rules.html">分割线语法</a></p>
-<h2 id="链接语法"><a href="#链接语法" class="headerlink" title="链接语法"></a>链接语法</h2><p><a target="_blank" rel="noopener" href="https://pic.netbian.com/">4K壁纸</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[4K壁纸](https://pic.netbian.com/)</span><br></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://pic.netbian.com/">https://pic.netbian.com/</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;https://pic.netbian.com/&gt;</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/links.html">链接语法</a></p>
-<h2 id="图片语法"><a href="#图片语法" class="headerlink" title="图片语法"></a>图片语法</h2><p><img src="/20260420.jpg" alt="运动是生命的热浪"></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![运动是生命的热浪](20260420.jpg )</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/images.html">图片语法</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
 
 </div>
   </main>
