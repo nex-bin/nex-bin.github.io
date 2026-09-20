@@ -139,12 +139,16 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -170,7 +174,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/09/11/QT-01-about/">
+    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/09/11/QT-2026-09-11-QT-02%E6%8E%A7%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -188,7 +192,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/09/11/QT-01-about/" class="post-title-link" itemprop="url">QT_01_about</a>
+          <a href="/2026/09/11/QT-2026-09-11-QT-02%E6%8E%A7%E4%BB%B6/" class="post-title-link" itemprop="url">QT_02控件</a>
         </h2>
 
         <div class="post-meta-container">
@@ -199,7 +203,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2026-09-11 17:36:02" itemprop="dateCreated datePublished" datetime="2026-09-11T17:36:02+08:00">2026-09-11</time>
+      <time title="Created: 2026-09-11 21:58:46" itemprop="dateCreated datePublished" datetime="2026-09-11T21:58:46+08:00">2026-09-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-09-14 17:41:52" itemprop="dateModified" datetime="2026-09-14T17:41:52+08:00">2026-09-14</time>
     </span>
 
   
@@ -212,7 +223,22 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <p>QMainWindow是带有菜单栏和工具栏的主窗口类.QDialog是各种对话框的基类，而他们全部继承自QWidget.QWidget是所有窗口部件的基类。</p>
+<h2 id="QMainWindow-的控件"><a href="#QMainWindow-的控件" class="headerlink" title="QMainWindow 的控件"></a>QMainWindow 的控件</h2><p>主窗口中包括菜单栏、工具栏、状态栏和中心区域等。</p>
+<h3 id="QMenuBar-菜单栏"><a href="#QMenuBar-菜单栏" class="headerlink" title="QMenuBar 菜单栏"></a>QMenuBar 菜单栏</h3><p>菜单栏包含了一个下拉菜单项的列表。这些菜单项是由 QAction动作类实现。菜单栏位于主窗口的顶部，一个主窗口只能由一个菜单栏。<br>QMenu 菜单项。</p>
+<figure class="highlight objc"><figcaption><span>hello world</span><a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-function-printf.html">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.cpp</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> init ()</span><br><span class="line">&#123;</span><br><span class="line"> 	QMenuBar *menuBar = new QMenuBar( <span class="variable language_">this</span> );</span><br><span class="line">    	</span><br><span class="line">    	QMenu * menu = new QMenu(<span class="string">&quot;新建&quot;</span>,menuBar);</span><br><span class="line">	menuBar-&gt;addMenu( menu );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="QToolBar-工具栏"><a href="#QToolBar-工具栏" class="headerlink" title="QToolBar 工具栏"></a>QToolBar 工具栏</h3><p>工具栏一般用于显示一些常用的菜单项目，也可以插入其他窗口部件，并且工具栏是可以移动的。一个主窗口可以拥有多个工具栏。<br>QMenu 菜单项。</p>
+<figure class="highlight objc"><figcaption><span>hello world</span><a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-function-printf.html">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.cpp</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> init ()</span><br><span class="line">&#123;</span><br><span class="line"> 	QToolBar *toolBar = new QToolBar( <span class="variable language_">this</span> );</span><br><span class="line">    	</span><br><span class="line">    	QMenu * menu = new QMenu(<span class="string">&quot;新建&quot;</span>,toolBar);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Central-Widget-中心部件"><a href="#Central-Widget-中心部件" class="headerlink" title="Central Widget 中心部件"></a>Central Widget 中心部件</h3><p>在主窗口的中心区域可以放入一个窗口部件作为中心部件，是应用程序的主要功能实现区域。一个主窗口只能拥有一个中心部件。<br>QMenu 菜单项。</p>
+<figure class="highlight objc"><figcaption><span>hello world</span><a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-function-printf.html">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.cpp</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> init ()</span><br><span class="line">&#123;</span><br><span class="line"> 	QToolBar *toolBar = new QToolBar( <span class="variable language_">this</span> );</span><br><span class="line">    	</span><br><span class="line">    	QMenu * menu = new QMenu(<span class="string">&quot;新建&quot;</span>,toolBar);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Donk-部件（QDockWidget）。"><a href="#Donk-部件（QDockWidget）。" class="headerlink" title="Donk 部件（QDockWidget）。"></a>Donk 部件（QDockWidget）。</h3><p>Dock部件常被称为停靠窗口，因为可以停靠在中心部件的四周，它用来放置一些部件来实现一些功能，就像个工具箱，一个主窗口可以拥有多个Dock部件。<br>QMenu 菜单项。</p>
+<figure class="highlight objc"><figcaption><span>hello world</span><a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-function-printf.html">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.cpp</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> init ()</span><br><span class="line">&#123;</span><br><span class="line"> 	QToolBar *toolBar = new QToolBar( <span class="variable language_">this</span> );</span><br><span class="line">    	</span><br><span class="line">    	QMenu * menu = new QMenu(<span class="string">&quot;新建&quot;</span>,toolBar);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="QStatusBar-状态栏。"><a href="#QStatusBar-状态栏。" class="headerlink" title="QStatusBar 状态栏。"></a>QStatusBar 状态栏。</h3><p>状态栏用于显示程序的一些状态信息，在主窗口的最底部。一个主窗口只能拥有一个状态栏。<br>QMenu 菜单项。</p>
+<figure class="highlight objc"><figcaption><span>hello world</span><a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-function-printf.html">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.cpp</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> init ()</span><br><span class="line">&#123;</span><br><span class="line"> 	QToolBar *toolBar = new QToolBar( <span class="variable language_">this</span> );</span><br><span class="line">    	</span><br><span class="line">    	QMenu * menu = new QMenu(<span class="string">&quot;新建&quot;</span>,toolBar);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -238,7 +264,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/06/30/CRC/">
+    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/09/11/QT-2026-09-11-QT-01-about/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -256,7 +282,127 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/06/30/CRC/" class="post-title-link" itemprop="url">Modbus RTU CRC 校验</a>
+          <a href="/2026/09/11/QT-2026-09-11-QT-01-about/" class="post-title-link" itemprop="url">QT_01_about</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2026-09-11 17:36:02 / Modified: 21:57:46" itemprop="dateCreated datePublished" datetime="2026-09-11T17:36:02+08:00">2026-09-11</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="QT-的优势"><a href="#QT-的优势" class="headerlink" title="QT 的优势"></a>QT 的优势</h2><p>Qt 在桌面、嵌入式和跨平台开发里能长期占据一席之地，主要优势可以归结为下面几点。</p>
+<h3 id="跨平台能力"><a href="#跨平台能力" class="headerlink" title="跨平台能力"></a>跨平台能力</h3><p>这是 Qt 最核心的卖点。</p>
+<ul>
+<li><p><strong>一套代码，多平台编译</strong>：Windows、Linux、macOS、Android、iOS，以及各种嵌入式 Linux、QNX、VxWorks 等。</p>
+</li>
+<li><p><strong>不依赖虚拟机</strong>：编译成原生代码，性能接近直接用平台 API，不像 Electron 那样套一层浏览器。</p>
+</li>
+<li><p><strong>平台差异被封装</strong>：文件系统、网络、线程、GUI 这些都有统一接口，很少需要写平台相关代码。</p>
+</li>
+</ul>
+<h3 id="开发效率"><a href="#开发效率" class="headerlink" title="开发效率"></a>开发效率</h3><ul>
+<li><p><strong>信号槽机制</strong>：对象间通信不用互相持有指针，解耦做得好，写起来直观。</p>
+</li>
+<li><p><strong>丰富的控件库</strong>：按钮、表格、树、图表、WebEngine 等开箱即用。</p>
+</li>
+<li><p><strong>Qt Designer</strong>：拖拽式做界面，配合 .ui 文件，界面和逻辑分离。</p>
+</li>
+<li><p><strong>QML &#x2F; Qt Quick</strong>：声明式写 UI，做动画、触摸交互、现代扁平化界面比传统 Widgets 快很多。</p>
+</li>
+<li><p><strong>元对象系统</strong>：反射、动态属性、运行时类型信息，很多框架里要手写的东西 Qt 直接给。</p>
+</li>
+</ul>
+<h3 id="性能与资源占用"><a href="#性能与资源占用" class="headerlink" title="性能与资源占用"></a>性能与资源占用</h3><ul>
+<li><p><strong>C++ 底层</strong>：没有 GC，内存可控，适合对实时性和资源敏感的场景。</p>
+</li>
+<li><p><strong>嵌入式友好</strong>：可以裁剪模块，最小能到几 MB 级别，跑在资源有限的设备上。</p>
+</li>
+<li><p><strong>硬件加速</strong>：Qt Quick 默认走 OpenGL &#x2F; Vulkan &#x2F; Metal，动画和渲染效率高。</p>
+</li>
+</ul>
+<p>生态与工具链</p>
+<ul>
+<li><p><strong>Qt Creator</strong>：官方 IDE，调试、 profiling、UI 设计、部署一体化。</p>
+</li>
+<li><p><strong>Qt Linguist</strong>：国际化翻译工具，多语言支持成熟。</p>
+</li>
+</ul>
+<h3 id="Qt-Test：单元测试框架。"><a href="#Qt-Test：单元测试框架。" class="headerlink" title="Qt Test：单元测试框架。"></a>Qt Test：单元测试框架。</h3><ul>
+<li><p><strong>Qt Installer Framework</strong>：打包安装程序。</p>
+</li>
+<li><p><strong>第三方库丰富</strong>：串口、CAN、Modbus、MQTT、图表、3D 等都有成熟模块或社区库。</p>
+</li>
+</ul>
+<h3 id="商业与授权"><a href="#商业与授权" class="headerlink" title="商业与授权"></a>商业与授权</h3><ul>
+<li><p><strong>双许可证</strong>：开源版（LGPL&#x2F;GPL）和商业版。</p>
+</li>
+<li><p><strong>LGPL 下可闭源</strong>：动态链接 Qt 库、不修改 Qt 源码，商业项目可以闭源发布，这是很多公司选它的重要原因。</p>
+</li>
+<li><p><strong>商业支持</strong>：买商业授权能拿到官方技术支持、长期维护版本、某些平台的特殊授权。</p>
+</li>
+</ul>
+<img src="/2026/09/11/uncategorized/QT-2026-09-11-QT-01-about/qt02.png" class="">
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/06/30/modbus-CRC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nex">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nex的博客">
+      <meta itemprop="description" content="description">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Nex的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/06/30/modbus-CRC/" class="post-title-link" itemprop="url">Modbus RTU CRC 校验</a>
         </h2>
 
         <div class="post-meta-container">
@@ -295,7 +441,7 @@
 <li>0x01至0xF7为有效从站地址范围；</li>
 <li>0xF8至0xFF保留或未使用。<br>紧接着地址域的是功能码(Function Code)，用于指示主站请求从站执行的具体操作。</li>
 </ul>
-<img src="/2026/06/30/CRC/modbus01.png" class="" title="[Modbus 功能码]">
+<img src="/2026/06/30/modbus-CRC/modbus01.png" class="" title="[Modbus 功能码]">
 <p><strong>帧结构示例：</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0x01 0x03 0x00 0x00 0x00 0x02 [CRC1] [CRC2]</span><br></pre></td></tr></table></figure>
 <p><strong>响应帧示例</strong></p>
@@ -310,9 +456,9 @@
 <p><code>类似于一次线性函数，y = ax + b；每一个y都有唯一的x与之对应。而CRC校验中就是根据余数b来进行判断数据传输是否有出错的。其中a为生成多项式g(x)。   计算CRC校验的过程就变成了计算余数的过程。</code></p>
 <h3 id="生成多项式"><a href="#生成多项式" class="headerlink" title="生成多项式"></a>生成多项式</h3><p>在CRC校验中存在多种变式。不同的变式对应不同的g(x)。在Modbus中使用的g(x)是：x^16 + x^15 + x^2 + 1。<br><code>x^16 + x^15 + x^2 + 1可以理解为是x^16 + x^15 + 0^14 + 0^13 + 。。。。 + x^2 + 0^1 + 1。其中，0的任何此幂都为0.</code><br>x^16 + x^15 + x^2 + 1 对应代码为： 0x 1100 0000 0000 0010 + 1 &#x3D;&#x3D;&#x3D;&#x3D;&gt; 在实际使用中会截去最高位 &#x3D;&#x3D;&#x3D;&#x3D;&gt; 0x 1000 0000 0000 0101 &#x3D; 0x8005  —-&gt; g(x)</p>
 <h3 id="模二除法"><a href="#模二除法" class="headerlink" title="模二除法"></a>模二除法</h3><p>模二除法是二进制运算中基于异或逻辑的除法方法，其特点为运算过程不借位、不比较数值大小。仅仅通过相同位数相除完成计算。</p>
-<img src="/2026/06/30/CRC/modbus02.png" class="" title="&#x2F;[Modbus]">
+<img src="/2026/06/30/modbus-CRC/modbus02.png" class="" title="&#x2F;[Modbus]">
 <p>图片左侧为正常运算过程，右侧为镜像运算过程。发现，镜像完全不影响运算过程。也分别对应了网络上的两种算法。<strong>正向算法</strong>和<strong>反向算法</strong>。<br>正向算法g(x)对应0xA001，反向算法g(x)对应0x8005。</p>
-<img src="/2026/06/30/CRC/modbus03.png" class="" title="&#x2F;[modbus]">
+<img src="/2026/06/30/modbus-CRC/modbus03.png" class="" title="&#x2F;[modbus]">
 <p>以反向算法为例：</p>
 <pre><code>unsigned short crc16_modbus(unsigned char *data, int len) {
     unsigned short crc &#x3D; 0xFFFF;
@@ -389,7 +535,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/06/29/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/06/29/hexo-hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -407,7 +553,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/06/29/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+          <a href="/2026/06/29/hexo-hello-world/" class="post-title-link" itemprop="url">Hello World</a>
         </h2>
 
         <div class="post-meta-container">
@@ -469,7 +615,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/06/25/modbus/">
+    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/06/25/modbus-aboutmodbus/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -487,7 +633,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/06/25/modbus/" class="post-title-link" itemprop="url">Modbus</a>
+          <a href="/2026/06/25/modbus-aboutmodbus/" class="post-title-link" itemprop="url">Modbus</a>
         </h2>
 
         <div class="post-meta-container">
@@ -505,7 +651,16 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-06-29 14:53:09" itemprop="dateModified" datetime="2026-06-29T14:53:09+08:00">2026-06-29</time>
+      <time title="Modified: 2026-09-17 13:34:40" itemprop="dateModified" datetime="2026-09-17T13:34:40+08:00">2026-09-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/modbus/" itemprop="url" rel="index"><span itemprop="name">-modbus</span></a>
+        </span>
     </span>
 
   
@@ -539,7 +694,7 @@
 <td>2字节</td>
 </tr>
 </tbody></table>
-<h3 id="Modbus功能码"><a href="#Modbus功能码" class="headerlink" title="Modbus功能码"></a>Modbus功能码</h3><img src="/2026/06/25/modbus/modbus01.png" class="" title="\[Modbus 功能码]">
+<h3 id="Modbus功能码"><a href="#Modbus功能码" class="headerlink" title="Modbus功能码"></a>Modbus功能码</h3>
 
 <h4 id="0x01-读取线圈-离散量输出值"><a href="#0x01-读取线圈-离散量输出值" class="headerlink" title="0x01 读取线圈&#x2F;离散量输出值"></a>0x01 读取线圈&#x2F;离散量输出值</h4><p>用于读取从设备的线圈或离散量输出的状态，即各DO(Discrete Output,离散输出)的ON&#x2F;OFF状态。即0或1.<br>需要注意，在Modbus协议规定的PDU中，规定所哟线圈或寄存器地址从0开始计算。</p>
 <h3 id="0x02-读取离散量输入值"><a href="#0x02-读取离散量输入值" class="headerlink" title="0x02 读取离散量输入值"></a>0x02 读取离散量输入值</h3><p>用于读取从设备的离散输入，即DI(Discrete Input)的ON&#x2F;OFF状态。即0或1.<br>消息帧中指定了需读取的离散输入寄存器起始地址和数目，可读取1-2000个连续的离散量输入状态.</p>
@@ -759,7 +914,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/06/11/hexo/">
+    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/06/11/hexo-hexo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -777,7 +932,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/06/11/hexo/" class="post-title-link" itemprop="url">hexo 用法</a>
+          <a href="/2026/06/11/hexo-hexo/" class="post-title-link" itemprop="url">hexo 用法</a>
         </h2>
 
         <div class="post-meta-container">
@@ -795,7 +950,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-09-11 17:42:08" itemprop="dateModified" datetime="2026-09-11T17:42:08+08:00">2026-09-11</time>
+      <time title="Modified: 2026-09-11 17:47:47" itemprop="dateModified" datetime="2026-09-11T17:47:47+08:00">2026-09-11</time>
     </span>
 
   
@@ -809,10 +964,13 @@
     
     <div class="post-body" itemprop="articleBody">
           <h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> [layout] &lt;title&gt;  用于创建一个新的名为title的文章</span><br></pre></td></tr></table></figure>
-<p>hexo 有三种默认布局：<strong>post</strong> 、<strong>page</strong> 和 <strong>draft</strong>。新建一篇文章，如果没有设置<strong>layout</strong>的话，默认使用 <code>_config.yaml</code> 中的 <strong>default_layout</strong> 参数代替。使用布局 <strong>draft</strong> 来创建草稿。<br>示例：</p>
+<p>示例：(在config.yaml中配置了之后，就会如下生成一个文件夹，每个文章的资源加载路径也变成了对应的文件夹名)</p>
+<img src="/qt01.png" class="">
+<p>hexo 有三种默认布局：<strong>post</strong> 、<strong>page</strong> 和 <strong>draft</strong>。新建一篇文章，如果没有设置<strong>layout</strong>的话，默认使用 <code>_config.yaml</code> 中的 <strong>default_layout</strong> 参数代替。使用布局 <strong>draft</strong> 来创建草稿。</p>
+<h3 id="静态论坛"><a href="#静态论坛" class="headerlink" title="静态论坛"></a>静态论坛</h3><p>配合Github项目，Aciton的自解析。将Hexo生成的资源文件夹(&#x2F;public)上传到github。</p>
+<p>将源代码整体上传到另一条线<br>示例：</p>
 <img src="/main01.png" class="">
 
-<h3 id="静态论坛"><a href="#静态论坛" class="headerlink" title="静态论坛"></a>静态论坛</h3><p>配合Github项目，Aciton的自解析。将Hexo生成的资源文件夹(&#x2F;public)上传到github。</p>
 <p><a target="_blank" rel="noopener" href="https://io-oi.me/tech/hexo-next-optimization/">Hexo+Next+Github</a></p>
 
       
@@ -840,7 +998,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/05/29/message/">
+    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/05/29/hexo-message/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -858,7 +1016,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/05/29/message/" class="post-title-link" itemprop="url">留言功能</a>
+          <a href="/2026/05/29/hexo-message/" class="post-title-link" itemprop="url">留言功能</a>
         </h2>
 
         <div class="post-meta-container">
@@ -889,7 +1047,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><img src="/2026/05/29/message/1.jpg" class="" width="400" height="600">
+          <h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2>
 
 <p><a target="_blank" rel="noopener" href="https://github.com/nex-bin/nex-bin.github.io/issues/new">我有话说</a></p>
 
@@ -918,7 +1076,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/05/28/asset/">
+    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/05/28/hexo-asset/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -936,7 +1094,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/05/28/asset/" class="post-title-link" itemprop="url">hexo 资源文件夹</a>
+          <a href="/2026/05/28/hexo-asset/" class="post-title-link" itemprop="url">hexo 资源文件夹</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1001,99 +1159,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/05/28/Tag-Plugins/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Nex">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nex的博客">
-      <meta itemprop="description" content="description">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Nex的博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/05/28/Tag-Plugins/" class="post-title-link" itemprop="url">Tag Plugins</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2026-05-28 09:36:21" itemprop="dateCreated datePublished" datetime="2026-05-28T09:36:21+08:00">2026-05-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-07-01 20:18:13" itemprop="dateModified" datetime="2026-07-01T20:18:13+08:00">2026-07-01</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h2><blockquote><p>人生自古谁无死，留取丹心照汗青。</p>
-<footer><strong>过零丁洋 </strong><cite>文天祥</cite></footer></blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote   过零丁洋,文天祥 %&#125;</span><br><span class="line">人生自古谁无死，留取丹心照汗青。</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><figure class="highlight objc"><figcaption><span>hello world</span><a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-function-printf.html">Runoob.com</a></figcaption><table><tr><td class="gutter"><pre><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="type">int</span> main ()</span><br><span class="line">&#123;</span><br><span class="line">   <span class="type">int</span> ch;</span><br><span class="line"> </span><br><span class="line">   <span class="keyword">for</span>( ch = <span class="number">75</span> ; ch &lt;= <span class="number">100</span>; ch++ ) &#123;</span><br><span class="line">      printf(<span class="string">&quot;ASCII 值 = %d, 字符 = %c\n&quot;</span>, ch , ch );</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   <span class="keyword">return</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock hello world  https://www.runoob.com/cprogramming/c-function-printf.html lang:objc first_line:5  line_number:<span class="literal">true</span>  highlight:<span class="literal">true</span> %&#125;</span><br><span class="line"><span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line"> </span><br><span class="line">int <span class="function"><span class="title">main</span></span> ()</span><br><span class="line">&#123;</span><br><span class="line">   int ch;</span><br><span class="line"> </span><br><span class="line">   <span class="keyword">for</span>( ch = 75 ; ch &lt;= 100; ch++ ) &#123;</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">&quot;ASCII 值 = %d, 字符 = %c\n&quot;</span>, ch , ch );</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   <span class="built_in">return</span>(0);</span><br><span class="line">&#125;</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h2><iframe src="https://pic.netbian.com/" width="800" height="400" frameborder="0" loading="lazy" allowfullscreen></iframe>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% iframe https://pic.netbian.com/ 800 400 %&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h2><img src="/20260420.jpg" class="" width="400" height="600" title="title text" alt="运动是生命的热浪">
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% img [class names] /20260420.jpg  <span class="string">&#x27;&quot;title text&quot; &quot;运动是生命的热浪&quot; &#x27;</span> %&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><a href="https://pic.netbian.com/" title="[external] [title]" target="">4K高清壁纸</a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="built_in">link</span> 4K高清壁纸 https://pic.netbian.com/ [external] [title] %&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2>
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; %  include_code <span class="attr">lang</span>:javascript <span class="attr">from</span>:<span class="number">3</span> <span class="attr">to</span>:<span class="number">5</span> test.<span class="property">js</span> %&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://nex-bin.github.io/2026/05/28/home/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1130,7 +1195,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-09-11 17:20:11" itemprop="dateModified" datetime="2026-09-11T17:20:11+08:00">2026-09-11</time>
+      <time title="Modified: 2026-09-20 16:48:52" itemprop="dateModified" datetime="2026-09-20T16:48:52+08:00">2026-09-20</time>
     </span>
 
   
@@ -1146,29 +1211,33 @@
           <h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><div class="link-grid"><div class="link-grid-container">
 <object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
 <p>Hexo</p><p>Nex-bin.</p>
-<a href="/2026/06/11/hexo/"></a>
+<a href="/2026/06/11/hexo-hexo/"></a>
 </div><div class="link-grid-container">
 <object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
 <p>Hexo资源文件夹</p><p>Nex-bin.</p>
-<a href="/2026/05/28/asset/"></a>
+<a href="/2026/05/28/hexo-asset/"></a>
 </div><div class="link-grid-container">
 <object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
 <p>Tag plugins</p><p>Nex-bin.</p>
-<a href="/2026/05/28/Tag-Plugins/"></a>
+<a href="/2026/05/28/hexo-Tag-Plugins/"></a>
 </div><div class="link-grid-container">
 <object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
 <p>Markdown</p><p>Nex-bin.</p>
-<a href="/2026/05/28/MarkDown/"></a>
+<a href="/2026/05/28/hexo-MarkDown/"></a>
+</div><div class="link-grid-container">
+<object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
+<p>Message</p><p>Nex-bin.</p>
+<a href="/2026/05/29/hexo-Message/"></a>
 </div></div>
 
 <h2 id="Modbus"><a href="#Modbus" class="headerlink" title="Modbus"></a>Modbus</h2><div class="link-grid"><div class="link-grid-container">
 <object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
 <p>Modbus</p><p>Nex-bin.</p>
-<a href="/2026/06/25/modbus/"></a>
+<a href="/2026/06/25/modbus-aboutmodbus/"></a>
 </div><div class="link-grid-container">
 <object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
 <p>ModbusRtuCRC-16</p><p>Nex-bin.</p>
-<a href="/2026/06/30/CRC/"></a>
+<a href="/2026/06/30/modbus-CRC/"></a>
 </div><div class="link-grid-container">
 <object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
 <p>ModbusTCP</p><p>Stay Simple. Stay NexT.</p>
@@ -1214,11 +1283,11 @@
 <h2 id="QT"><a href="#QT" class="headerlink" title="QT"></a>QT</h2><div class="link-grid"><div class="link-grid-container">
 <object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
 <p>QT</p><p>Nex-bin.</p>
-<a href="/2026/06/11/hexo/"></a>
+<a href="/2026/09/11/QT-01-about/"></a>
 </div><div class="link-grid-container">
 <object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
-<p>Hexo资源文件夹</p><p>Nex-bin.</p>
-<a href="/2026/05/28/asset/"></a>
+<p>控件</p><p>Nex-bin.</p>
+<a href="/2026/09/11/QT-02控件/"></a>
 </div><div class="link-grid-container">
 <object class="link-grid-image" data="/images/apple-touch-icon-next.png"></object>
 <p>Tag plugins</p><p>Nex-bin.</p>

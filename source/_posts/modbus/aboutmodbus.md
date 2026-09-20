@@ -3,6 +3,7 @@
 title: Modbus
 date: 2026-06-25 16:56:05
 tags: -Communication Protocol.
+categories: -modbus
 ---
 
 ## Modbus 通讯的分类。

@@ -2,7 +2,7 @@
 
 git push origin main
 
-{% img /main01.png %}
+!\[](images/main01.png)
 
 
 
