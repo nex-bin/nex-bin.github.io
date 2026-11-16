@@ -6,13 +6,14 @@
 {% block class %}index posts-expand{% endblock %}
 
 {% block content %}
-
-  {%- for post in page.posts.toArray() %}
-    {{ partial('_macro/post.njk', {post: post, is_index: true}) }}
-  {%- endfor %}
-
-  {%- include '_partials/pagination.njk' -%}
-
+  <div class="forum-hero">
+    <h1>欢迎来到我的论坛</h1>
+    <p>这里是公告、导航和板块入口</p>
+    <ul>
+      <li><a href="/category/tech/">技术交流</a></li>
+      <li><a href="/category/life/">生活杂谈</a></li>
+    </ul>
+  </div>
 {% endblock %}
 
 {% block sidebar %}

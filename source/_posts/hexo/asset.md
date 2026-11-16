@@ -2,7 +2,10 @@
 
 title: hexo 资源文件夹
 date: 2026-05-28 15:28:06
-tags:  Hexo
+tags: 
+	- Hexo
+	- Grammer
+	
 ---
 
 ## 前提
@@ -17,9 +20,9 @@ post_asset_folder: true
 使用普通markdown语法或其他资源可能会导致存档或者索引页面上的内容显示不正确。`hexo 3`中添加了新的标签插件。可以更轻松的在帖子中引用你的资源。
 ### 代码如下
 {% codeblock%}
-{ % asset_path slug %}
-{ % asset_img slug [title] %}
-{ % asset_link slug [title] % }
+{% asset_path slug %}
+{% asset_img slug [title] %}
+{% asset_link slug [title] %}
 {% endcodeblock %}
 例如，在启用帖子资源文件夹的情况下，如果你将图片，`example.jpg`放入资源文件夹，如果使用常规应用`![](example.jpg)`markdown的语法的相对路径引用它，他将不会出现在索引页面上。
 
